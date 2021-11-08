@@ -18,4 +18,4 @@ jobs:
             service_account_key: ${{ secrets.CREDENTIALS }}
             
         - name: Exporting DB
-          run: gcloud sql export sql test-db gs://jatin-test
+          run: gcloud sql export test-db gs://jatin-test
