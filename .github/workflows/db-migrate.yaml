@@ -16,7 +16,6 @@ jobs:
             GCP_PROJECT_ID: ${{ secrets.PROJECT_ID }}
             service_account_email: ${{ secrets.EMAIL }}
             service_account_key: ${{ secrets.CREDENTIALS }}
-            export_default_credentials: true
- 
+            
         - name: Exporting DB
           run: gcloud sql export sql test-db gs://jatin-test
