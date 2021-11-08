@@ -1,6 +1,6 @@
 name: Exporting of DB
  
-on: workflow_dispatch
+on: push
  
 jobs:
  
