@@ -18,4 +18,5 @@ jobs:
             service_account_key: ${{ secrets.CREDENTIALS }}
             
         - name: Exporting DB
-          run: gcloud sql export sql test-db gs://jatin-test/hello.sql
+          run: gcloud config set project cs-tmpl-test
+               gcloud sql export sql test-db gs://jatin-test
