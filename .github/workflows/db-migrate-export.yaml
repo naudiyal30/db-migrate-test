@@ -3,7 +3,7 @@ name: DB Export/import
 on: workflow_dispatch
 
 env:
-     OPERATION: gcloud sql import sql vip-759456 gs://fff-fdi-backup/prod-mysql-db.sql.gz
+     OPERATION: gcloud sql import sql db-test1 gs://jatin-test/hello.sql.gz
 
 jobs:
 
