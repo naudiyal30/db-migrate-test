@@ -35,5 +35,6 @@ jobs:
             
         - name: Importing DB
           run: gcloud sql import sql db-test1 gs://jatin-test/hello.sql
+               gcloud sql operations wait "${PENDING_OPERATIONS}" --timeout=unlimited
             
     
