@@ -37,7 +37,8 @@ jobs:
           run: gcloud config set project cs-tmpl-dev
             
         - name: Importing DB
-          run:  gcloud sql import sql db-test1 gs://jatin-test/hello.sql.gz
+          run:  OPERATION=$(gcloud sql import sql db-test1 gs://jatin-test/hello.sql.gz)
+                gcloud sql operations wait --project cs-tmpl-dev ${OPERATION} --timeout unlimited
           
             
     
